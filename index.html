@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Użycie Moment.js</title>
+</head>
+<body>
+    <div id="log"></div>
+  <span  id="howmuchdays"> </span> <span class="unit">dni</span>
+  <div id="wesolo"></div>
+  <span id="wesolo-days"></span> <span class="unit">dni</span>
+  <div id="nienie"></div>
+  <span id="nienie-days"></span> <span class="unit">dni</span>
+  <div id="laptop"></div>
+  <span id="laptop-days"></span> <span class="unit">dni</span>
+  <div id="laptopb"></div>
+  <span id="laptopb-days"></span> <span class="unit">dni</span>
+  <div id="komorka"></div>
+  <span id="komorka-days"></span> <span class="unit">dni</span>
+  <div id="kindle"></div>
+  <span id="kindle-days"></span> <span class="unit">dni</span>
+  <div id="komputer"></div>
+  <span id="komputer-days"></span> <span class="unit">dni</span>
+  <br><br>
+  <input type="button" onclick="changeThird()" value="Zmien na lata">
+  <br><br>
+ <input type="button" onclick="change()" value="Zmien na miesiące">
+ <br><br>
+ <input type="button" onclick="changeSec()" value="Zmien na dni">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+  <script>
+  var days = moment().diff("2016-07-23", "days");
+document.getElementById('howmuchdays').innerHTML = days;
+document.getElementById('log').innerHTML += '<br>Mam coś od...';
+var wesolo = moment().diff("2012-12-03", "days");
+document.getElementById('wesolo-days').innerHTML = wesolo;
+document.getElementById('wesolo').innerHTML += '<br>Mam coś innego od...';
+var nienie = moment().diff("2012-07-17", "days");
+document.getElementById('nienie-days').innerHTML = nienie;
+document.getElementById('nienie').innerHTML += '<br>Mam coś innego od...';
+var laptop = moment().diff("2016-08-10", "days");
+document.getElementById('laptop-days').innerHTML = laptop;
+document.getElementById('laptop').innerHTML += '<br>Mam laptopa U310 od...';
+var laptopb = moment().diff("2016-09-08", "days");
+document.getElementById('laptopb-days').innerHTML = laptopb;
+document.getElementById('laptopb').innerHTML += '<br>Mam laptopa kotki od...';
+var komorka = moment().diff("2017-07-10", "days");
+document.getElementById('komorka-days').innerHTML = komorka;
+document.getElementById('komorka').innerHTML += '<br>Mam komorke Xioami Redmi 3S od...';
+var komputer = moment().diff("2018-05-15", "days");
+document.getElementById('komputer-days').innerHTML = komputer;
+document.getElementById('komputer').innerHTML += '<br>Mam komputer DDR2 od...';
+var kindle = moment().diff("2018-04-09", "days");
+document.getElementById('kindle-days').innerHTML = kindle;
+document.getElementById('kindle').innerHTML += '<br>Mam kindle z naprawiona szybka od...';
+function change() {
+  var month = moment().diff("2016-07-23", "months");
+  var month2 = moment().diff("2012-12-03", "months");
+  var month3 = moment().diff("2018-05-15", "months");
+  var month4 = moment().diff("2012-07-17", "months");
+  var month5 = moment().diff("2016-08-10", "months");
+  var month6 = moment().diff("2016-09-08", "months");
+  var month7 = moment().diff("2017-07-10", "months");
+  var month8 = moment().diff("2018-04-09", "months");
+  document.getElementById('howmuchdays').innerHTML = month;
+  document.getElementById('wesolo-days').innerHTML = month2;
+  document.getElementById('komputer-days').innerHTML = month3;
+  document.getElementById('nienie-days').innerHTML = month4;
+  document.getElementById('laptop-days').innerHTML = month5;
+  document.getElementById('laptopb-days').innerHTML = month6;
+  document.getElementById('komorka-days').innerHTML = month7;
+  document.getElementById('kindle-days').innerHTML = month8;
+  var newText = document.getElementsByClassName('unit');
+  for (var i = 0; i < newText.length; ++i) {
+    var item = newText[i];  
+    item.innerHTML = 'pełnych miesięcy';
+}
+}
+function changeSec() {
+  var days = moment().diff("2016-07-23", "days");
+document.getElementById('howmuchdays').innerHTML = days;
+var wesolo = moment().diff("2012-12-03", "days");
+document.getElementById('wesolo-days').innerHTML = wesolo;
+var nienie = moment().diff("2012-07-17", "days");
+document.getElementById('nienie-days').innerHTML = nienie;
+var laptop = moment().diff("2016-08-10", "days");
+document.getElementById('laptop-days').innerHTML = laptop;
+var laptopb = moment().diff("2016-09-08", "days");
+document.getElementById('laptopb-days').innerHTML = laptopb;
+var komorka = moment().diff("2017-07-10", "days");
+document.getElementById('komorka-days').innerHTML = komorka;
+var komputer = moment().diff("2018-05-15", "days");
+document.getElementById('komputer-days').innerHTML = komputer;
+var kindle = moment().diff("2018-04-09", "days");
+document.getElementById('kindle-days').innerHTML = kindle;
+  var newText = document.getElementsByClassName('unit');
+  for (var i = 0; i < newText.length; ++i) {
+    var item = newText[i];  
+    item.innerHTML = 'dni';
+}
+}
+function changeThird() {
+  var year = moment().diff("2016-07-23", "years");
+  var year2 = moment().diff("2012-12-03", "years");
+  var year3 = moment().diff("2018-05-15", "years");
+  var year4 = moment().diff("2012-07-17", "years");
+  var year5 = moment().diff("2016-08-10", "years");
+  var year6 = moment().diff("2016-09-08", "years");
+  var year7 = moment().diff("2017-07-10", "years");
+  var year8 = moment().diff("2018-04-09", "years");
+  document.getElementById('howmuchdays').innerHTML = year;
+  document.getElementById('wesolo-days').innerHTML = year2;
+  document.getElementById('komputer-days').innerHTML = year3;
+  document.getElementById('nienie-days').innerHTML = year4;
+  document.getElementById('laptop-days').innerHTML = year5;
+  document.getElementById('laptopb-days').innerHTML = year6;
+  document.getElementById('komorka-days').innerHTML = year7;
+  document.getElementById('kindle-days').innerHTML = year8;
+  var newText = document.getElementsByClassName('unit');
+  for (var i = 0; i < newText.length; ++i) {
+    var item = newText[i];  
+    item.innerHTML = 'pełnych lat';
+}
+}
+</script>
+</body>
+</html>
